@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Laravel\Facades;
+namespace Ud5495\XPub\Laravel\Facades;
 
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\DerivationPath;
-use Bedud5495\XPub\ExtendedKey;
-use Bedud5495\XPub\Scheme;
-use Bedud5495\XPub\Version;
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\DerivationPath;
+use Ud5495\XPub\ExtendedKey;
+use Ud5495\XPub\Scheme;
+use Ud5495\XPub\Version;
+use Ud5495\XPub\XPubService;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static string hash160(string $hex)
  * @method static string doubleSha256(string $hex)
  *
- * @see \Bedud5495\XPub\XPubService
+ * @see \Ud5495\XPub\XPubService
  */
 final class XPub extends Facade
 {

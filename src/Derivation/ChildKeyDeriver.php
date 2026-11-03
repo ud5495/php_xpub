@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Derivation;
+namespace Ud5495\XPub\Derivation;
 
-use Bedud5495\XPub\ChildNumber;
-use Bedud5495\XPub\Crypto\Hasher;
-use Bedud5495\XPub\Crypto\Secp256k1;
-use Bedud5495\XPub\Exception\DerivationException;
-use Bedud5495\XPub\ExtendedKey;
-use Bedud5495\XPub\PublicKey;
+use Ud5495\XPub\ChildNumber;
+use Ud5495\XPub\Crypto\Hasher;
+use Ud5495\XPub\Crypto\Secp256k1;
+use Ud5495\XPub\Exception\DerivationException;
+use Ud5495\XPub\ExtendedKey;
+use Ud5495\XPub\PublicKey;
 use phpseclib3\Math\BigInteger;
 
 final class ChildKeyDeriver

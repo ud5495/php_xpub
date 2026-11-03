@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Crypto;
+namespace Ud5495\XPub\Crypto;
 
-use Bedud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\Exception\InvalidXPubException;
 
 final class Hasher
 {

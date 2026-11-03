@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Crypto;
+namespace Ud5495\XPub\Crypto;
 
-use Bedud5495\XPub\Exception\DerivationException;
-use Bedud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\Exception\DerivationException;
+use Ud5495\XPub\Exception\InvalidXPubException;
 use phpseclib3\Crypt\EC\BaseCurves\Prime;
 use phpseclib3\Crypt\EC\Curves\secp256k1 as Secp256k1Curve;
 use phpseclib3\Math\BigInteger;

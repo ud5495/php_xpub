@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Tests;
+namespace Ud5495\XPub\Tests;
 
-use Bedud5495\XPub\Codec\CashAddr;
+use Ud5495\XPub\Codec\CashAddr;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 

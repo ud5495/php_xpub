@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub;
+namespace Ud5495\XPub;
 
-use Bedud5495\XPub\Exception\UnsupportedVersionException;
+use Ud5495\XPub\Exception\UnsupportedVersionException;
 
 enum Version: string
 {

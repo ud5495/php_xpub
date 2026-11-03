@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Address;
+namespace Ud5495\XPub\Address;
 
-use Bedud5495\XPub\Codec\RippleBase58;
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Crypto\Hasher;
-use Bedud5495\XPub\Exception\InvalidXPubException;
-use Bedud5495\XPub\ExtendedKey;
+use Ud5495\XPub\Codec\RippleBase58;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Crypto\Hasher;
+use Ud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\ExtendedKey;
 
 final class XrpAddressGenerator implements AddressGenerator
 {

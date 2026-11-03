@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+## 2.0.0
+
+- **Breaking:** renamed the Composer package from `bedud5495/php_xpub` to `ud5495/php_xpub`.
+- **Breaking:** renamed the PHP namespace from `Bedud5495\XPub` to `Ud5495\XPub`.
+- Moved the repository to <https://github.com/ud5495/php_xpub>.
+- Migration: replace `composer require bedud5495/php_xpub` with `composer require ud5495/php_xpub`
+  and update imports from `Bedud5495\XPub\...` to `Ud5495\XPub\...`.
+
 ## 1.2.2
 
 - Add XRP (`Coin::XRP`, value `xrp`) address generation using Ripple Base58Check.

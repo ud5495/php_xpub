@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Laravel;
+namespace Ud5495\XPub\Laravel;
 
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\XPubService;
 use Illuminate\Support\ServiceProvider;
 
 final class XPubServiceProvider extends ServiceProvider

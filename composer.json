@@ -1,5 +1,5 @@
 {
-    "name": "bedud5495/php_xpub",
+    "name": "ud5495/php_xpub",
     "description": "Derive BTC, LTC, DOGE, BCH, DASH, ETH, TRON and XRP extended public keys and addresses without GMP.",
     "keywords": [
         "xpub",
@@ -17,17 +17,17 @@
         "bip32",
         "laravel"
     ],
-    "homepage": "https://github.com/bedud5495/php_xpub",
+    "homepage": "https://github.com/ud5495/php_xpub",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "bedud5495"
+            "name": "ud5495"
         }
     ],
     "support": {
-        "issues": "https://github.com/bedud5495/php_xpub/issues",
-        "source": "https://github.com/bedud5495/php_xpub"
+        "issues": "https://github.com/ud5495/php_xpub/issues",
+        "source": "https://github.com/ud5495/php_xpub"
     },
     "require": {
         "php": "^8.1",
@@ -48,21 +48,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Bedud5495\\XPub\\": "src/"
+            "Ud5495\\XPub\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bedud5495\\XPub\\Tests\\": "tests/"
+            "Ud5495\\XPub\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bedud5495\\XPub\\Laravel\\XPubServiceProvider"
+                "Ud5495\\XPub\\Laravel\\XPubServiceProvider"
             ],
             "aliases": {
-                "XPub": "Bedud5495\\XPub\\Laravel\\Facades\\XPub"
+                "XPub": "Ud5495\\XPub\\Laravel\\Facades\\XPub"
             }
         }
     },

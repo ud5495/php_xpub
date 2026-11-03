@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Address;
+namespace Ud5495\XPub\Address;
 
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Exception\UnsupportedCoinException;
-use Bedud5495\XPub\Network;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Exception\UnsupportedCoinException;
+use Ud5495\XPub\Network;
 
 /**
  * Version bytes and human-readable parts used to encode UTXO addresses.

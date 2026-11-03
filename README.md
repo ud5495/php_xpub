@@ -1,6 +1,6 @@
 # php_xpub
 
-[![tests](https://github.com/bedud5495/php_xpub/actions/workflows/php.yml/badge.svg)](https://github.com/bedud5495/php_xpub/actions/workflows/php.yml)
+[![tests](https://github.com/ud5495/php_xpub/actions/workflows/php.yml/badge.svg)](https://github.com/ud5495/php_xpub/actions/workflows/php.yml)
 
 Derive BTC, LTC, DOGE, BCH, DASH, ETH, TRON and XRP extended public keys and addresses from
 xpub/tpub/ypub/upub/zpub/vpub keys.
@@ -25,16 +25,19 @@ arithmetic when it is available, but it is not required.
 ## Installation
 
 ```bash
-composer require bedud5495/php_xpub
+composer require ud5495/php_xpub
 ```
+
+> **Upgrading from 1.x?** Version 2.0.0 moved the package to `ud5495/php_xpub` and the namespace to
+> `Ud5495\XPub`. Update your `composer require` line and every `use` statement accordingly.
 
 ## Usage
 
 ```php
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Scheme;
-use Bedud5495\XPub\Version;
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Scheme;
+use Ud5495\XPub\Version;
+use Ud5495\XPub\XPubService;
 
 $service = XPubService::withDefaults();
 
@@ -99,8 +102,8 @@ Unsupported combinations throw `UnsupportedAddressSchemeException`.
 The package is auto-discovered. Inject `XPubService` or use the `XPub` facade:
 
 ```php
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Laravel\Facades\XPub;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Laravel\Facades\XPub;
 
 $key = XPub::fromString('xpub...');
 $address = XPub::toAddress(XPub::derive($key, [0, 0]), Coin::BTC);
@@ -125,8 +128,8 @@ a controller, routes, exception handling, and a feature test.
 ### TRON example
 
 ```php
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Laravel\Facades\XPub;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Laravel\Facades\XPub;
 
 $xpub = 'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9';
 $key = XPub::fromString($xpub);
@@ -141,8 +144,8 @@ $address1 = XPub::toAddress(XPub::derive($key, 1), Coin::TRON);
 ### XRP example
 
 ```php
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Laravel\Facades\XPub;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Laravel\Facades\XPub;
 
 $xpub = 'xpub6Duw1vrZFioQHUpKTEKMYNRkmHAJHFnXk2KaferFUvDwzSXvSY2deXJVJT1eatsHamQW4Rp2Dm3Y4vGuPu7nLxqgSAixg7xUQ37kB1VUR97';
 $key = XPub::fromString($xpub);
@@ -160,21 +163,21 @@ $address1 = XPub::toAddress(XPub::derive($key, 1), Coin::XRP);
 implementation, construct the service with your own instances:
 
 ```php
-use Bedud5495\XPub\Address\AddressGeneratorRegistry;
-use Bedud5495\XPub\Address\EthereumAddressGenerator;
-use Bedud5495\XPub\Address\TronAddressGenerator;
-use Bedud5495\XPub\Address\UtxoAddressGenerator;
-use Bedud5495\XPub\Address\XrpAddressGenerator;
-use Bedud5495\XPub\Codec\Base58;
-use Bedud5495\XPub\Codec\Bech32;
-use Bedud5495\XPub\Codec\CashAddr;
-use Bedud5495\XPub\Codec\ExtendedKeyCodec;
-use Bedud5495\XPub\Codec\RippleBase58;
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Crypto\Hasher;
-use Bedud5495\XPub\Crypto\Secp256k1;
-use Bedud5495\XPub\Derivation\ChildKeyDeriver;
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\Address\AddressGeneratorRegistry;
+use Ud5495\XPub\Address\EthereumAddressGenerator;
+use Ud5495\XPub\Address\TronAddressGenerator;
+use Ud5495\XPub\Address\UtxoAddressGenerator;
+use Ud5495\XPub\Address\XrpAddressGenerator;
+use Ud5495\XPub\Codec\Base58;
+use Ud5495\XPub\Codec\Bech32;
+use Ud5495\XPub\Codec\CashAddr;
+use Ud5495\XPub\Codec\ExtendedKeyCodec;
+use Ud5495\XPub\Codec\RippleBase58;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Crypto\Hasher;
+use Ud5495\XPub\Crypto\Secp256k1;
+use Ud5495\XPub\Derivation\ChildKeyDeriver;
+use Ud5495\XPub\XPubService;
 
 $base58 = new Base58();
 $bech32 = new Bech32();
@@ -204,6 +207,11 @@ $service = new XPubService(
 
 Packagist renders this README (not `CHANGELOG.md`), so recent releases are summarized here.
 See [CHANGELOG.md](CHANGELOG.md) for the full history.
+
+### 2.0.0
+
+- **Breaking:** package renamed to `ud5495/php_xpub` and namespace to `Ud5495\XPub`.
+- Repository moved to <https://github.com/ud5495/php_xpub>.
 
 ### 1.2.2
 

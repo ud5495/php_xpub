@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Tests;
+namespace Ud5495\XPub\Tests;
 
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Exception\InvalidDerivationPathException;
-use Bedud5495\XPub\Exception\InvalidXPubException;
-use Bedud5495\XPub\Scheme;
-use Bedud5495\XPub\Version;
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Exception\InvalidDerivationPathException;
+use Ud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\Scheme;
+use Ud5495\XPub\Version;
+use Ud5495\XPub\XPubService;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 

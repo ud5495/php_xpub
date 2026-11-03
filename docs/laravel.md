@@ -6,7 +6,7 @@ domain exception handling, an API route, and a feature test.
 ## Installation
 
 ```bash
-composer require bedud5495/php_xpub
+composer require ud5495/php_xpub
 ```
 
 The package is auto-discovered through `extra.laravel`. No configuration file is required.
@@ -17,7 +17,7 @@ Laravel 11+ (`bootstrap/app.php`):
 
 ```php
 ->withProviders([
-    \Bedud5495\XPub\Laravel\XPubServiceProvider::class,
+    \Ud5495\XPub\Laravel\XPubServiceProvider::class,
 ])
 ```
 
@@ -26,12 +26,12 @@ Laravel 10 (`config/app.php`):
 ```php
 'providers' => [
     // ...
-    Bedud5495\XPub\Laravel\XPubServiceProvider::class,
+    Ud5495\XPub\Laravel\XPubServiceProvider::class,
 ],
 
 'aliases' => [
     // ...
-    'XPub' => Bedud5495\XPub\Laravel\Facades\XPub::class,
+    'XPub' => Ud5495\XPub\Laravel\Facades\XPub::class,
 ],
 ```
 
@@ -46,8 +46,8 @@ Validation keeps malformed paths and unknown coin/scheme values out of the domai
 
 namespace App\Http\Requests;
 
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Scheme;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Scheme;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -87,10 +87,10 @@ final class DeriveAddressRequest extends FormRequest
 namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\DeriveAddressRequest;
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Exception\XPubExceptionInterface;
-use Bedud5495\XPub\Scheme;
-use Bedud5495\XPub\XPubService;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Exception\XPubExceptionInterface;
+use Ud5495\XPub\Scheme;
+use Ud5495\XPub\XPubService;
 use Illuminate\Http\JsonResponse;
 
 final class XPubController extends Controller
@@ -125,7 +125,7 @@ final class XPubController extends Controller
 }
 ```
 
-All library exceptions implement `Bedud5495\XPub\Exception\XPubExceptionInterface`, so one
+All library exceptions implement `Ud5495\XPub\Exception\XPubExceptionInterface`, so one
 `catch` handles invalid keys, invalid paths, unsupported schemes, and failed derivations.
 
 ## Route
@@ -145,8 +145,8 @@ Route::post('/xpub/derive', [XPubController::class, 'derive'])
 Use the facade in Artisan commands, jobs, or tinker sessions:
 
 ```php
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Laravel\Facades\XPub;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Laravel\Facades\XPub;
 
 $key = XPub::fromString('xpub68Gmy5EdvgibQVfPdqkBBCHxA5htiqg55crXYuXoQRKfDBFA1WEjWgP6LHhwBZeNK1VTsfTFUHCdrfp1bgwQ9xv5ski8PX9rL2dZXvgGDnw');
 $child = XPub::derive($key, [1]);

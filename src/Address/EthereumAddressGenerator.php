@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Address;
+namespace Ud5495\XPub\Address;
 
-use Bedud5495\XPub\Coin;
-use Bedud5495\XPub\Crypto\Secp256k1;
-use Bedud5495\XPub\Exception\InvalidXPubException;
-use Bedud5495\XPub\ExtendedKey;
+use Ud5495\XPub\Coin;
+use Ud5495\XPub\Crypto\Secp256k1;
+use Ud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\ExtendedKey;
 use kornrunner\Keccak;
 
 final class EthereumAddressGenerator implements AddressGenerator

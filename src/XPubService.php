@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub;
+namespace Ud5495\XPub;
 
-use Bedud5495\XPub\Address\AddressGeneratorRegistry;
-use Bedud5495\XPub\Address\EthereumAddressGenerator;
-use Bedud5495\XPub\Address\TronAddressGenerator;
-use Bedud5495\XPub\Address\UtxoAddressGenerator;
-use Bedud5495\XPub\Address\XrpAddressGenerator;
-use Bedud5495\XPub\Codec\Base58;
-use Bedud5495\XPub\Codec\Bech32;
-use Bedud5495\XPub\Codec\CashAddr;
-use Bedud5495\XPub\Codec\ExtendedKeyCodec;
-use Bedud5495\XPub\Codec\RippleBase58;
-use Bedud5495\XPub\Crypto\Hasher;
-use Bedud5495\XPub\Crypto\Secp256k1;
-use Bedud5495\XPub\Derivation\ChildKeyDeriver;
-use Bedud5495\XPub\Exception\UnsupportedVersionException;
+use Ud5495\XPub\Address\AddressGeneratorRegistry;
+use Ud5495\XPub\Address\EthereumAddressGenerator;
+use Ud5495\XPub\Address\TronAddressGenerator;
+use Ud5495\XPub\Address\UtxoAddressGenerator;
+use Ud5495\XPub\Address\XrpAddressGenerator;
+use Ud5495\XPub\Codec\Base58;
+use Ud5495\XPub\Codec\Bech32;
+use Ud5495\XPub\Codec\CashAddr;
+use Ud5495\XPub\Codec\ExtendedKeyCodec;
+use Ud5495\XPub\Codec\RippleBase58;
+use Ud5495\XPub\Crypto\Hasher;
+use Ud5495\XPub\Crypto\Secp256k1;
+use Ud5495\XPub\Derivation\ChildKeyDeriver;
+use Ud5495\XPub\Exception\UnsupportedVersionException;
 
 final class XPubService
 {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub\Codec;
+namespace Ud5495\XPub\Codec;
 
-use Bedud5495\XPub\Crypto\Hasher;
-use Bedud5495\XPub\Crypto\Secp256k1;
-use Bedud5495\XPub\Exception\InvalidXPubException;
-use Bedud5495\XPub\ExtendedKey;
-use Bedud5495\XPub\PublicKey;
-use Bedud5495\XPub\Scheme;
-use Bedud5495\XPub\Version;
+use Ud5495\XPub\Crypto\Hasher;
+use Ud5495\XPub\Crypto\Secp256k1;
+use Ud5495\XPub\Exception\InvalidXPubException;
+use Ud5495\XPub\ExtendedKey;
+use Ud5495\XPub\PublicKey;
+use Ud5495\XPub\Scheme;
+use Ud5495\XPub\Version;
 
 final class ExtendedKeyCodec
 {

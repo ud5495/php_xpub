@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bedud5495\XPub;
+namespace Ud5495\XPub;
 
 enum Coin: string
 {
