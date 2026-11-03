@@ -12,4 +12,6 @@ All notable changes to this project are documented in this file.
 - DOGE and DASH support P2PKH; unsupported SegWit schemes throw an exception.
 - Requires only BCMath; GMP is optional.
 - Laravel service provider and facade with package auto-discovery.
+- Laravel guide with Form Request, controller, route, exception handling and feature test.
+- All domain exceptions implement `XPubExceptionInterface`.
 - PHPUnit parity test suite and PHPStan level 8.

@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 namespace Bedud5495\XPub\Exception;
 
-class DerivationException extends \RuntimeException
+class DerivationException extends \RuntimeException implements XPubExceptionInterface
 {
 }

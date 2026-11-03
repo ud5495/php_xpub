@@ -92,27 +92,18 @@ Unsupported combinations throw `UnsupportedAddressSchemeException`.
 
 ## Laravel
 
-The package is auto-discovered. The service is available through the container and the `XPub`
-facade:
+The package is auto-discovered. Inject `XPubService` or use the `XPub` facade:
 
 ```php
+use Bedud5495\XPub\Coin;
 use Bedud5495\XPub\Laravel\Facades\XPub;
 
 $key = XPub::fromString('xpub...');
-$address = XPub::toAddress($key);
+$address = XPub::toAddress(XPub::derive($key, [0, 0]), Coin::BTC);
 ```
 
-Or inject the service:
-
-```php
-use Bedud5495\XPub\XPubService;
-
-final class WalletController
-{
-    public function __construct(private readonly XPubService $xpub)
-    {
-    }
-}
+See [docs/laravel.md](docs/laravel.md) for a complete example with Form Request validation,
+a controller, routes, exception handling, and a feature test.
 ```
 
 ## Custom construction
