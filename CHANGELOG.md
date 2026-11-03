@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 1.2.1
+
+- Document every supported coin and add a verified TRON usage example to the README.
+- Add address vectors for every `Coin` case and a regression test covering all enum values.
+
 ## 1.2.0
 
 - Add TRON (`Coin::TRON`, value `tron`) address generation using Base58Check with the `0x41`
