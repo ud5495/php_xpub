@@ -9,6 +9,7 @@
         "bitcoin-cash",
         "dash",
         "ethereum",
+        "tron",
         "address",
         "derivation",
         "bip32",

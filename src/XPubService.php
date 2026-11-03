@@ -6,6 +6,7 @@ namespace Bedud5495\XPub;
 
 use Bedud5495\XPub\Address\AddressGeneratorRegistry;
 use Bedud5495\XPub\Address\EthereumAddressGenerator;
+use Bedud5495\XPub\Address\TronAddressGenerator;
 use Bedud5495\XPub\Address\UtxoAddressGenerator;
 use Bedud5495\XPub\Codec\Base58;
 use Bedud5495\XPub\Codec\Bech32;
@@ -44,6 +45,7 @@ final class XPubService
                 new UtxoAddressGenerator(Coin::BCH, $base58, $bech32, $cashAddr, $hasher),
                 new UtxoAddressGenerator(Coin::DASH, $base58, $bech32, $cashAddr, $hasher),
                 new EthereumAddressGenerator($curve),
+                new TronAddressGenerator($curve, $base58, $hasher),
             ]),
             $hasher,
         );

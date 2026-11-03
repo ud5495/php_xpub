@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## 1.2.0
+
+- Add TRON (`Coin::TRON`, value `tron`) address generation using Base58Check with the `0x41`
+  prefix over the Keccak-256 public key hash.
+- Register `TronAddressGenerator` by default and document TRON in the README and Laravel guide.
+
 ## 1.1.1
 
 - Fix CashAddr checksum generation: the prefix is expanded using only the lower five bits of

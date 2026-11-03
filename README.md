@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/bedud5495/php_xpub/actions/workflows/php.yml/badge.svg)](https://github.com/bedud5495/php_xpub/actions/workflows/php.yml)
 
-Derive BTC, LTC, DOGE, BCH, DASH and ETH extended public keys and addresses from
+Derive BTC, LTC, DOGE, BCH, DASH, ETH and TRON extended public keys and addresses from
 xpub/tpub/ypub/upub/zpub/vpub keys.
 
 The library only requires the BCMath extension. GMP is used automatically for faster big-integer
@@ -59,6 +59,7 @@ $dogeAddress = $service->toAddress($grandChild, Coin::DOGE);
 $bchAddress = $service->toAddress($grandChild, Coin::BCH);
 $dashAddress = $service->toAddress($grandChild, Coin::DASH);
 $ethAddress = $service->toAddress($grandChild, Coin::ETH);
+$tronAddress = $service->toAddress($grandChild, Coin::TRON);
 
 // Convert between supported versions without changing the key material.
 $zpub = $service->withVersion($key, Version::ZPUB);
@@ -87,6 +88,7 @@ $checksum = $service->doubleSha256($dataHex);
 | BCH  | CashAddr (P2PKH) | not supported | not supported |
 | DASH | P2PKH | not supported | not supported |
 | ETH  | EIP-55 checksummed address | – | – |
+| TRON | Base58Check address (0x41 prefix) | – | – |
 
 Unsupported combinations throw `UnsupportedAddressSchemeException`.
 
@@ -114,6 +116,7 @@ implementation, construct the service with your own instances:
 ```php
 use Bedud5495\XPub\Address\AddressGeneratorRegistry;
 use Bedud5495\XPub\Address\EthereumAddressGenerator;
+use Bedud5495\XPub\Address\TronAddressGenerator;
 use Bedud5495\XPub\Address\UtxoAddressGenerator;
 use Bedud5495\XPub\Codec\Base58;
 use Bedud5495\XPub\Codec\Bech32;
@@ -141,6 +144,7 @@ $service = new XPubService(
         new UtxoAddressGenerator(Coin::BCH, $base58, $bech32, $cashAddr, $hasher),
         new UtxoAddressGenerator(Coin::DASH, $base58, $bech32, $cashAddr, $hasher),
         new EthereumAddressGenerator($curve),
+        new TronAddressGenerator($curve, $base58, $hasher),
     ]),
     $hasher,
 );

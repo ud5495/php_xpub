@@ -287,6 +287,24 @@ final class XPubServiceTest extends TestCase
             Coin::ETH,
         ];
 
+        yield 'tron child 0' => [
+            'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9',
+            null,
+            0,
+            null,
+            'TFAnkgRx4wBdJLLxgcRwVvF4vkVGsxQnhi',
+            Coin::TRON,
+        ];
+
+        yield 'tron child 1' => [
+            'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9',
+            null,
+            1,
+            null,
+            'TV5nWufu5Z1JrCb7byD8eLrp76vo3ZXy3w',
+            Coin::TRON,
+        ];
+
         yield 'bip44 path 0/0' => [
             'xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj',
             null,

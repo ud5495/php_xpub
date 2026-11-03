@@ -19,6 +19,7 @@ final class CoinAddressTest extends TestCase
     private const TESTNET_UPUB = 'upub5EFU65HtV5TeiSHmZZm7FUffBGy8UKeqp7vw43jYbvZPpoVsgU93oac7Wk3u6moKegAEWtGNF8DehrnHtv21XXEMYRUocHqguyjknFHYfgY';
     private const MAINNET_ZPUB = 'zpub6rFR7y4Q2AijBEqTUquhVz398htDFrtymD9xYYfG1m4wAcvPhXNfE3EfH1r1ADqtfSdVCToUG868RvUUkgDKf31mGDtKsAYz2oz2AGutZYs';
     private const MAINNET_BIP49_XPUB = 'xpub661MyMwKB68aRCnMw21BgrgiihMhh7YdYD2s9hWWEFrXpJaUeEzb5ZowLULwfU1GeyXYqCXixNiJ6x24ihByL5yr1nikgGjhJyzG4NGZrWM';
+    private const TRON_XPUB = 'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9';
 
     private XPubService $service;
 
@@ -125,6 +126,46 @@ final class CoinAddressTest extends TestCase
             [0, 0],
             Coin::BCH,
             'bchtest:qrppq8s8geq5hjpe5agh78xsesgr0dklgy2nvgx3xh',
+        ];
+
+        yield 'tron address 0' => [
+            self::TRON_XPUB,
+            null,
+            0,
+            Coin::TRON,
+            'TFAnkgRx4wBdJLLxgcRwVvF4vkVGsxQnhi',
+        ];
+
+        yield 'tron address 1' => [
+            self::TRON_XPUB,
+            null,
+            1,
+            Coin::TRON,
+            'TV5nWufu5Z1JrCb7byD8eLrp76vo3ZXy3w',
+        ];
+
+        yield 'tron address 2' => [
+            self::TRON_XPUB,
+            null,
+            2,
+            Coin::TRON,
+            'TL8qet2hp9NTfuAuMeESNzWZaMWBUX2H3g',
+        ];
+
+        yield 'tron address 3' => [
+            self::TRON_XPUB,
+            null,
+            3,
+            Coin::TRON,
+            'TVweoyBzm9xQabTecQKEmUyecaK5Li2ULX',
+        ];
+
+        yield 'tron address 4' => [
+            self::TRON_XPUB,
+            null,
+            4,
+            Coin::TRON,
+            'TTj1Au1wjBkmhSQ4EFYZEjHgWjVij6yxtb',
         ];
 
         yield 'ltc mainnet native segwit' => [
