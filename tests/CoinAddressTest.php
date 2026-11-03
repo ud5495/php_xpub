@@ -92,7 +92,7 @@ final class CoinAddressTest extends TestCase
             null,
             1,
             Coin::BCH,
-            'bitcoincash:qzl0tghe544ff243y3vlw2kee7x0r8rmhcy283qsnv',
+            'bitcoincash:qzl0tghe544ff243y3vlw2kee7x0r8rmhcd0wd5lgy',
         ];
 
         yield 'ltc testnet p2pkh' => [
@@ -124,7 +124,7 @@ final class CoinAddressTest extends TestCase
             null,
             [0, 0],
             Coin::BCH,
-            'bchtest:qrppq8s8geq5hjpe5agh78xsesgr0dklgy4gjkx8yl',
+            'bchtest:qrppq8s8geq5hjpe5agh78xsesgr0dklgy2nvgx3xh',
         ];
 
         yield 'ltc mainnet native segwit' => [

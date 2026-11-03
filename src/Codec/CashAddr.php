@@ -114,16 +114,16 @@ final class CashAddr
     private function prefixExpand(string $prefix): array
     {
         $prefix = strtolower($prefix);
-        $lower = [];
-        $upper = [];
+
+        $result = [];
 
         foreach (str_split($prefix) as $character) {
-            $ordinal = ord($character);
-            $lower[] = $ordinal & 0x1F;
-            $upper[] = $ordinal >> 5;
+            $result[] = ord($character) & 0x1F;
         }
 
-        return array_merge($lower, [0], $upper);
+        $result[] = 0;
+
+        return $result;
     }
 
     /**

@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## 1.1.1
+
+- Fix CashAddr checksum generation: the prefix is expanded using only the lower five bits of
+  each character, as required by the CashAddr specification. This corrects all BCH addresses.
+- Add regression tests using the official CashAddr specification vectors.
+
 ## 1.0.0
 
 - Initial release of `bedud5495/php_xpub`.
