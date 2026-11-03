@@ -4,7 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## 1.2.2
 
-- Update the package description to include TRON.
+- Add XRP (`Coin::XRP`, value `xrp`) address generation using Ripple Base58Check.
+- Update the package description to include TRON and XRP.
 - Surface the changelog in the README, since Packagist renders only the README.
 
 ## 1.2.1

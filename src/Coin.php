@@ -9,6 +9,7 @@ enum Coin: string
     case BTC = 'btc';
     case ETH = 'eth';
     case TRON = 'tron';
+    case XRP = 'xrp';
     case LTC = 'ltc';
     case DOGE = 'doge';
     case BCH = 'bch';

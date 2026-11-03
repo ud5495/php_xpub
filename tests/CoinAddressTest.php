@@ -20,6 +20,7 @@ final class CoinAddressTest extends TestCase
     private const MAINNET_ZPUB = 'zpub6rFR7y4Q2AijBEqTUquhVz398htDFrtymD9xYYfG1m4wAcvPhXNfE3EfH1r1ADqtfSdVCToUG868RvUUkgDKf31mGDtKsAYz2oz2AGutZYs';
     private const MAINNET_BIP49_XPUB = 'xpub661MyMwKB68aRCnMw21BgrgiihMhh7YdYD2s9hWWEFrXpJaUeEzb5ZowLULwfU1GeyXYqCXixNiJ6x24ihByL5yr1nikgGjhJyzG4NGZrWM';
     private const TRON_XPUB = 'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9';
+    private const XRP_XPUB = 'xpub6Duw1vrZFioQHUpKTEKMYNRkmHAJHFnXk2KaferFUvDwzSXvSY2deXJVJT1eatsHamQW4Rp2Dm3Y4vGuPu7nLxqgSAixg7xUQ37kB1VUR97';
 
     private XPubService $service;
 
@@ -98,6 +99,14 @@ final class CoinAddressTest extends TestCase
             1,
             Coin::TRON,
             'TDj9LctTLkSqiXQKELL4po3PgpnHKSHrJp',
+        ];
+
+        yield 'xrp mainnet' => [
+            self::MAINNET_XPUB,
+            null,
+            1,
+            Coin::XRP,
+            'rJQ6e2cLPdMnySUkiZkVaaGpwFwXermqLj',
         ];
 
         yield 'ltc mainnet p2pkh' => [
@@ -202,6 +211,86 @@ final class CoinAddressTest extends TestCase
             4,
             Coin::TRON,
             'TTj1Au1wjBkmhSQ4EFYZEjHgWjVij6yxtb',
+        ];
+
+        yield 'xrp address 0' => [
+            self::XRP_XPUB,
+            null,
+            0,
+            Coin::XRP,
+            'rN7LCRMygHWWUEnDATAFrLCcGVQMgVm3gW',
+        ];
+
+        yield 'xrp address 1' => [
+            self::XRP_XPUB,
+            null,
+            1,
+            Coin::XRP,
+            'rwZJsg29pRw7H1925QmKau52RKLoimfDdc',
+        ];
+
+        yield 'xrp address 2' => [
+            self::XRP_XPUB,
+            null,
+            2,
+            Coin::XRP,
+            'r4XJwv1LDpYrJQ3t7Gv9BuZBFHa8JmnehG',
+        ];
+
+        yield 'xrp address 3' => [
+            self::XRP_XPUB,
+            null,
+            3,
+            Coin::XRP,
+            'rUBZzPTwTgEwyVJqdjDCMCCuW1L1ENsB4U',
+        ];
+
+        yield 'xrp address 4' => [
+            self::XRP_XPUB,
+            null,
+            4,
+            Coin::XRP,
+            'rHRHuGz56dNpnmGAKyUJ6TSHVDrrUstZ1r',
+        ];
+
+        yield 'xrp address 5' => [
+            self::XRP_XPUB,
+            null,
+            5,
+            Coin::XRP,
+            'rBnJLuwKFrJt3K96L2XjAfhruoBCig1qP3',
+        ];
+
+        yield 'xrp address 6' => [
+            self::XRP_XPUB,
+            null,
+            6,
+            Coin::XRP,
+            'rEw13ytcsDnqJ3G69GeCbYdn9m9A7gct2h',
+        ];
+
+        yield 'xrp address 7' => [
+            self::XRP_XPUB,
+            null,
+            7,
+            Coin::XRP,
+            'r41bEmvgNskVFKp8PUUvTB9kjEKnowmsmB',
+        ];
+
+        yield 'xrp address 8' => [
+            self::XRP_XPUB,
+            null,
+            8,
+            Coin::XRP,
+            'rN2jUKrFHQKUo4RP5ya3yFgwTvVYxReb6U',
+        ];
+
+        yield 'xrp address 9' => [
+            self::XRP_XPUB,
+            null,
+            9,
+            Coin::XRP,
+            'rmDSHBgbAS3N8ygUoVMYfDy3g2Nq7Uwnb',
         ];
 
         yield 'ltc mainnet native segwit' => [

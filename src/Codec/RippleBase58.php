@@ -1,0 +1,39 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Bedud5495\XPub\Codec;
+
+use Bedud5495\XPub\Exception\InvalidXPubException;
+use StephenHill\Base58 as StephenHillBase58;
+
+/**
+ * Base58 codec using the Ripple alphabet.
+ *
+ * @see https://xrpl.org/accounts.html#address-encoding
+ */
+final class RippleBase58
+{
+    public const ALPHABET = 'rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz';
+
+    private ?StephenHillBase58 $codec = null;
+
+    public function encode(string $bytes): string
+    {
+        return $this->codec()->encode($bytes);
+    }
+
+    public function decode(string $encoded): string
+    {
+        try {
+            return $this->codec()->decode($encoded);
+        } catch (\Throwable $exception) {
+            throw new InvalidXPubException('Invalid Ripple Base58 string.', 0, $exception);
+        }
+    }
+
+    private function codec(): StephenHillBase58
+    {
+        return $this->codec ??= new StephenHillBase58(self::ALPHABET);
+    }
+}

@@ -76,7 +76,7 @@ final class DeriveAddressRequest extends FormRequest
 
 `Rule::enum(...)` validates the backed values:
 
-- `coin`: `btc`, `eth`, `tron`, `ltc`, `doge`, `bch`, `dash`
+- `coin`: `btc`, `eth`, `tron`, `xrp`, `ltc`, `doge`, `bch`, `dash`
 - `scheme`: `bip-44`, `bip-49`, `bip-84`
 
 ## Controller
@@ -210,4 +210,5 @@ final class XPubControllerTest extends TestCase
 - BCH returns CashAddr addresses; DOGE and DASH only support P2PKH.
 - ETH addresses are EIP-55 checksummed.
 - TRON addresses are Base58Check encoded with the `0x41` prefix.
+- XRP addresses use Ripple Base58Check with version byte `0x00`.
 - The service is stateless and safe to reuse across requests.

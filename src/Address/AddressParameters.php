@@ -58,6 +58,7 @@ final class AddressParameters
             ),
             Coin::ETH => throw new UnsupportedCoinException('Ethereum does not use UTXO address parameters.'),
             Coin::TRON => throw new UnsupportedCoinException('Tron does not use UTXO address parameters.'),
+            Coin::XRP => throw new UnsupportedCoinException('XRP does not use UTXO address parameters.'),
         };
     }
 }
