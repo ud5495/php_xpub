@@ -1,0 +1,15 @@
+# Changelog
+
+All notable changes to this project are documented in this file.
+
+## 1.0.0
+
+- Initial release of `bedud5495/php_xpub`.
+- Service-oriented rewrite with immutable `ExtendedKey` values and enums.
+- Supports BIP44/BIP49/BIP84 extended keys (xpub/tpub/ypub/upub/zpub/vpub).
+- Derives BTC, LTC, DOGE, BCH, DASH and ETH addresses.
+- BCH uses CashAddr; LTC supports P2PKH, nested SegWit and native SegWit.
+- DOGE and DASH support P2PKH; unsupported SegWit schemes throw an exception.
+- Requires only BCMath; GMP is optional.
+- Laravel service provider and facade with package auto-discovery.
+- PHPUnit parity test suite and PHPStan level 8.

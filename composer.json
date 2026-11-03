@@ -1,0 +1,75 @@
+{
+    "name": "bedud5495/php_xpub",
+    "description": "Derive BTC, LTC, DOGE, BCH, DASH and ETH extended public keys and addresses without GMP.",
+    "keywords": [
+        "xpub",
+        "bitcoin",
+        "litecoin",
+        "dogecoin",
+        "bitcoin-cash",
+        "dash",
+        "ethereum",
+        "address",
+        "derivation",
+        "bip32",
+        "laravel"
+    ],
+    "homepage": "https://github.com/bedud5495/php_xpub",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "bedud5495"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/bedud5495/php_xpub/issues",
+        "source": "https://github.com/bedud5495/php_xpub"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-bcmath": "*",
+        "bitwasp/bech32": "^0.0.1",
+        "kornrunner/keccak": "^1.1",
+        "phpseclib/phpseclib": "^3.0",
+        "stephenhill/base58": "^2.1"
+    },
+    "require-dev": {
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "suggest": {
+        "ext-gmp": "Optional faster big integer arithmetic",
+        "illuminate/support": "Required for the Laravel service provider and facade"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bedud5495\\XPub\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bedud5495\\XPub\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bedud5495\\XPub\\Laravel\\XPubServiceProvider"
+            ],
+            "aliases": {
+                "XPub": "Bedud5495\\XPub\\Laravel\\Facades\\XPub"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
