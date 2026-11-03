@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 1.2.2
+
+- Update the package description to include TRON.
+- Surface the changelog in the README, since Packagist renders only the README.
+
 ## 1.2.1
 
 - Document every supported coin and add a verified TRON usage example to the README.

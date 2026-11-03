@@ -177,6 +177,29 @@ $service = new XPubService(
 );
 ```
 
+## Changelog
+
+Packagist renders this README (not `CHANGELOG.md`), so recent releases are summarized here.
+See [CHANGELOG.md](CHANGELOG.md) for the full history.
+
+### 1.2.2
+
+- Package description now includes TRON.
+- Changelog surfaced in this README.
+
+### 1.2.1
+
+- Documented every supported coin and added a verified TRON example.
+- Added address vectors for every `Coin` case and a regression test covering all enum values.
+
+### 1.2.0
+
+- Added TRON address generation (`Coin::TRON`, value `tron`).
+
+### 1.1.1
+
+- Fixed CashAddr checksum prefix expansion.
+
 ## Development
 
 ```bash

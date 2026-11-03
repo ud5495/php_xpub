@@ -1,6 +1,6 @@
 {
     "name": "bedud5495/php_xpub",
-    "description": "Derive BTC, LTC, DOGE, BCH, DASH and ETH extended public keys and addresses without GMP.",
+    "description": "Derive BTC, LTC, DOGE, BCH, DASH, ETH and TRON extended public keys and addresses without GMP.",
     "keywords": [
         "xpub",
         "bitcoin",
