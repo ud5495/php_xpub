@@ -106,6 +106,33 @@ $address = XPub::toAddress(XPub::derive($key, [0, 0]), Coin::BTC);
 
 See [docs/laravel.md](docs/laravel.md) for a complete example with Form Request validation,
 a controller, routes, exception handling, and a feature test.
+
+## Supported coins
+
+| Coin | Enum value | Derivation | Address format |
+|------|------------|------------|----------------|
+| Bitcoin       | `Coin::BTC`  | BIP44 / BIP49 / BIP84 | P2PKH, P2SH-wrapped SegWit, bech32 |
+| Litecoin      | `Coin::LTC`  | BIP44 / BIP49 / BIP84 | P2PKH, P2SH-wrapped SegWit, bech32 |
+| Dogecoin      | `Coin::DOGE` | BIP44 | P2PKH |
+| Bitcoin Cash  | `Coin::BCH`  | BIP44 | CashAddr |
+| Dash          | `Coin::DASH` | BIP44 | P2PKH |
+| Ethereum      | `Coin::ETH`  | BIP44 (`m/44'/60'/0'/0`) | EIP-55 |
+| TRON          | `Coin::TRON` | BIP44 (`m/44'/195'/0'/0`) | Base58Check (`0x41` prefix) |
+
+### TRON example
+
+```php
+use Bedud5495\XPub\Coin;
+use Bedud5495\XPub\Laravel\Facades\XPub;
+
+$xpub = 'xpub6Dw3psxyMo73ox5g6HHLfHsp8j4K66fJmWYngSL3EucDshiU9mjmsFACX3M1TetKpApAEwvv3jNLFMg4PGSeDKioNVrAZfaVm6yaYGsMap9';
+$key = XPub::fromString($xpub);
+
+$address0 = XPub::toAddress(XPub::derive($key, 0), Coin::TRON);
+// TFAnkgRx4wBdJLLxgcRwVvF4vkVGsxQnhi
+
+$address1 = XPub::toAddress(XPub::derive($key, 1), Coin::TRON);
+// TV5nWufu5Z1JrCb7byD8eLrp76vo3ZXy3w
 ```
 
 ## Custom construction

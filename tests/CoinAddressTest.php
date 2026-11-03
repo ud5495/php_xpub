@@ -45,6 +45,18 @@ final class CoinAddressTest extends TestCase
         self::assertSame($expected, $this->service->toAddress($child, $coin));
     }
 
+    public function testItSupportsEveryCoin(): void
+    {
+        $key = $this->service->fromString(self::MAINNET_XPUB);
+        $child = $this->service->derive($key, 1);
+
+        foreach (Coin::cases() as $coin) {
+            $address = $this->service->toAddress($child, $coin);
+
+            self::assertNotSame('', $address, sprintf('Coin "%s" produced an empty address.', $coin->value));
+        }
+    }
+
     #[DataProvider('unsupportedSchemeVectors')]
     public function testItRejectsSegwitSchemesForCoinsWithoutSegwit(
         string $parent,
@@ -64,6 +76,30 @@ final class CoinAddressTest extends TestCase
      */
     public static function addressVectors(): iterable
     {
+        yield 'btc mainnet p2pkh' => [
+            self::MAINNET_XPUB,
+            null,
+            1,
+            Coin::BTC,
+            '1JQheacLPdM5ySCkrZkV66G2ApAXe1mqLj',
+        ];
+
+        yield 'eth mainnet' => [
+            self::MAINNET_XPUB,
+            null,
+            1,
+            Coin::ETH,
+            '0x29379f45F515C494483298225d1B347F73D1babF',
+        ];
+
+        yield 'tron mainnet' => [
+            self::MAINNET_XPUB,
+            null,
+            1,
+            Coin::TRON,
+            'TDj9LctTLkSqiXQKELL4po3PgpnHKSHrJp',
+        ];
+
         yield 'ltc mainnet p2pkh' => [
             self::MAINNET_XPUB,
             null,
